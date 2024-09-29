@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Review from "./Review";
-export default function Show({item2}){
+export default function Show({item2}:any){
     const [visible ,setvisible]=useState(false);
     const a=item2.images
     
