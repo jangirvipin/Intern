@@ -1,7 +1,7 @@
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 import Show from "./Show";
 
-export default function Item({selectcat}){
+export default function Item({selectcat}:any){
     return (
         <div>
             {selectcat && 

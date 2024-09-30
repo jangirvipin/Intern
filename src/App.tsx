@@ -3,6 +3,8 @@ import { SetStateAction, useEffect, useState } from "react";
 import Item from "./items";
 
 function App() {
+ 
+
   const [cat, setCat] = useState([]);
   const [selectCat, setSelectCat] = useState([]); 
   const [, setValue] = useState(''); 
@@ -11,6 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [searchTerm, setSearchTerm] = useState(''); 
+
 
  
   useEffect(() => {
