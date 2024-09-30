@@ -4,7 +4,7 @@ import Item from "./items";
 
 function App() {
   const [cat, setCat] = useState([]);
-  const [selectCat, setSelectCat] = useState<any>([]); 
+  const [selectCat, setSelectCat] = useState([]); 
   const [, setValue] = useState(''); 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
@@ -33,7 +33,7 @@ function App() {
     setLoading(true);
     try {
       const result = await axios(`https://dummyjson.com/products?limit=${itemsPerPage}&skip=${(currentPage - 1) * itemsPerPage}`);
-      setSelectCat((prev: any) => [...prev, ...result.data.products]);
+      setSelectCat((prev):any => [...prev, ...result.data.products]);
       setHasMore(result.data.products.length === itemsPerPage);
     } catch (error) {
       console.error("Error fetching products:", error);
